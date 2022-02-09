@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssemblyPay.Sdk", "Org.OpenAPITools\AssemblyPay.Sdk.csproj", "{6E76F319-EA5D-4913-BFCC-B8E8E9D917C6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssemblyPay.Sdk.Test", "Org.OpenAPITools.Test\AssemblyPay.Sdk.Test.csproj", "{CF82764F-08E8-40C1-A3A5-F1231249E8D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E76F319-EA5D-4913-BFCC-B8E8E9D917C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E76F319-EA5D-4913-BFCC-B8E8E9D917C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E76F319-EA5D-4913-BFCC-B8E8E9D917C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E76F319-EA5D-4913-BFCC-B8E8E9D917C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF82764F-08E8-40C1-A3A5-F1231249E8D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF82764F-08E8-40C1-A3A5-F1231249E8D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF82764F-08E8-40C1-A3A5-F1231249E8D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF82764F-08E8-40C1-A3A5-F1231249E8D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A17C536-682F-4B31-9E5E-3F4F8AC597CB}
+	EndGlobalSection
+EndGlobal

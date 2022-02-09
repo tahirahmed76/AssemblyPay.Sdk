@@ -1,0 +1,9 @@
+C:\Users\Tahir\src\Org.OpenAPITools\bin\Release\netstandard2.0\Org.OpenAPITools.xml
+C:\Users\Tahir\src\Org.OpenAPITools\bin\Release\netstandard2.0\Org.OpenAPITools.deps.json
+C:\Users\Tahir\src\Org.OpenAPITools\bin\Release\netstandard2.0\Org.OpenAPITools.dll
+C:\Users\Tahir\src\Org.OpenAPITools\bin\Release\netstandard2.0\Org.OpenAPITools.pdb
+C:\Users\Tahir\src\Org.OpenAPITools\obj\Release\netstandard2.0\Org.OpenAPITools.csproj.AssemblyReference.cache
+C:\Users\Tahir\src\Org.OpenAPITools\obj\Release\netstandard2.0\Org.OpenAPITools.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tahir\src\Org.OpenAPITools\obj\Release\netstandard2.0\Org.OpenAPITools.csproj.CoreCompileInputs.cache
+C:\Users\Tahir\src\Org.OpenAPITools\obj\Release\netstandard2.0\Org.OpenAPITools.dll
+C:\Users\Tahir\src\Org.OpenAPITools\obj\Release\netstandard2.0\Org.OpenAPITools.pdb
