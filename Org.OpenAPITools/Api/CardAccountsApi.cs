@@ -10,15 +10,10 @@
 
 
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Net;
-using System.Net.Mime;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using AssemblyPay.Sdk.Client;
+using AssemblyPay.Sdk.Model;
 
-namespace Org.OpenAPITools.Api
+namespace AssemblyPay.Sdk.Api
 {
 
     /// <summary>
@@ -33,7 +28,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Create a Credit **Card Account** to be used as a funding source. Store the returned &#x60;:id&#x60; and use it for a &#x60;make_payment&#x60; **Item Action** call. The &#x60;:id&#x60; is also referred to as a **token** when involving Credit Cards. 
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cardAccountRequestBody"></param>
         /// <returns>CardAccount</returns>
         CardAccount CreateCardAccount(CardAccountRequestBody cardAccountRequestBody);
@@ -44,7 +39,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Create a Credit **Card Account** to be used as a funding source. Store the returned &#x60;:id&#x60; and use it for a &#x60;make_payment&#x60; **Item Action** call. The &#x60;:id&#x60; is also referred to as a **token** when involving Credit Cards. 
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cardAccountRequestBody"></param>
         /// <returns>ApiResponse of CardAccount</returns>
         ApiResponse<CardAccount> CreateCardAccountWithHttpInfo(CardAccountRequestBody cardAccountRequestBody);
@@ -54,7 +49,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Redact a Credit **Card Account** using a given &#x60;:id&#x60;. Redacted Credit **Card Accounts** can no longer be used as a funding source. 
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the card account to be deleted</param>
         /// <returns>CardAccountDeletion</returns>
         CardAccountDeletion RedactCardAccount(string id);
@@ -65,7 +60,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Redact a Credit **Card Account** using a given &#x60;:id&#x60;. Redacted Credit **Card Accounts** can no longer be used as a funding source. 
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the card account to be deleted</param>
         /// <returns>ApiResponse of CardAccountDeletion</returns>
         ApiResponse<CardAccountDeletion> RedactCardAccountWithHttpInfo(string id);
@@ -75,7 +70,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show details of a specific Credit **Card Account** using a given &#x60;:id&#x60;. You can toggle the card account number display to show the first 6 digits in addition to the last 4 digits. Contact Assembly if you want to toggle the card account display. 
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <returns>CardAccount</returns>
         CardAccount ShowCardAccount(string id);
@@ -86,7 +81,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show details of a specific Credit **Card Account** using a given &#x60;:id&#x60;. You can toggle the card account number display to show the first 6 digits in addition to the last 4 digits. Contact Assembly if you want to toggle the card account display. 
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <returns>ApiResponse of CardAccount</returns>
         ApiResponse<CardAccount> ShowCardAccountWithHttpInfo(string id);
@@ -96,7 +91,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **User** the Credit **Card Account** is associated with using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <returns>SingleUser</returns>
         SingleUser ShowCardAccountUser(string id);
@@ -107,7 +102,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **User** the Credit **Card Account** is associated with using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <returns>ApiResponse of SingleUser</returns>
         ApiResponse<SingleUser> ShowCardAccountUserWithHttpInfo(string id);
@@ -117,7 +112,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Where pre-authorization is enabled on a platform, verifies a **Card Account** when a **Card Account** is successfully verified, its verification status is &#x60;verified&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <param name="cardAccountVerifyRequestBody"> (optional)</param>
         /// <returns>CardAccount</returns>
@@ -129,7 +124,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Where pre-authorization is enabled on a platform, verifies a **Card Account** when a **Card Account** is successfully verified, its verification status is &#x60;verified&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <param name="cardAccountVerifyRequestBody"> (optional)</param>
         /// <returns>ApiResponse of CardAccount</returns>
@@ -149,7 +144,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Create a Credit **Card Account** to be used as a funding source. Store the returned &#x60;:id&#x60; and use it for a &#x60;make_payment&#x60; **Item Action** call. The &#x60;:id&#x60; is also referred to as a **token** when involving Credit Cards. 
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cardAccountRequestBody"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CardAccount</returns>
@@ -161,7 +156,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Create a Credit **Card Account** to be used as a funding source. Store the returned &#x60;:id&#x60; and use it for a &#x60;make_payment&#x60; **Item Action** call. The &#x60;:id&#x60; is also referred to as a **token** when involving Credit Cards. 
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cardAccountRequestBody"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CardAccount)</returns>
@@ -172,7 +167,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Redact a Credit **Card Account** using a given &#x60;:id&#x60;. Redacted Credit **Card Accounts** can no longer be used as a funding source. 
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the card account to be deleted</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CardAccountDeletion</returns>
@@ -184,7 +179,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Redact a Credit **Card Account** using a given &#x60;:id&#x60;. Redacted Credit **Card Accounts** can no longer be used as a funding source. 
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the card account to be deleted</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CardAccountDeletion)</returns>
@@ -195,7 +190,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show details of a specific Credit **Card Account** using a given &#x60;:id&#x60;. You can toggle the card account number display to show the first 6 digits in addition to the last 4 digits. Contact Assembly if you want to toggle the card account display. 
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CardAccount</returns>
@@ -207,7 +202,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show details of a specific Credit **Card Account** using a given &#x60;:id&#x60;. You can toggle the card account number display to show the first 6 digits in addition to the last 4 digits. Contact Assembly if you want to toggle the card account display. 
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CardAccount)</returns>
@@ -218,7 +213,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **User** the Credit **Card Account** is associated with using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SingleUser</returns>
@@ -230,7 +225,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **User** the Credit **Card Account** is associated with using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SingleUser)</returns>
@@ -241,7 +236,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Where pre-authorization is enabled on a platform, verifies a **Card Account** when a **Card Account** is successfully verified, its verification status is &#x60;verified&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <param name="cardAccountVerifyRequestBody"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -254,7 +249,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Where pre-authorization is enabled on a platform, verifies a **Card Account** when a **Card Account** is successfully verified, its verification status is &#x60;verified&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <param name="cardAccountVerifyRequestBody"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
@@ -276,7 +271,7 @@ namespace Org.OpenAPITools.Api
     /// </summary>
     public partial class CardAccountsApi : ICardAccountsApi
     {
-        private Org.OpenAPITools.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private AssemblyPay.Sdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CardAccountsApi"/> class.
@@ -292,13 +287,13 @@ namespace Org.OpenAPITools.Api
         /// <returns></returns>
         public CardAccountsApi(string basePath)
         {
-            this.Configuration = Org.OpenAPITools.Client.Configuration.MergeConfigurations(
-                Org.OpenAPITools.Client.GlobalConfiguration.Instance,
-                new Org.OpenAPITools.Client.Configuration { BasePath = basePath }
+            this.Configuration = AssemblyPay.Sdk.Client.Configuration.MergeConfigurations(
+                AssemblyPay.Sdk.Client.GlobalConfiguration.Instance,
+                new AssemblyPay.Sdk.Client.Configuration { BasePath = basePath }
             );
-            this.Client = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
+            this.Client = new AssemblyPay.Sdk.Client.ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new AssemblyPay.Sdk.Client.ApiClient(this.Configuration.BasePath);
+            this.ExceptionFactory = AssemblyPay.Sdk.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -307,17 +302,17 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public CardAccountsApi(Org.OpenAPITools.Client.Configuration configuration)
+        public CardAccountsApi(AssemblyPay.Sdk.Client.Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
-            this.Configuration = Org.OpenAPITools.Client.Configuration.MergeConfigurations(
-                Org.OpenAPITools.Client.GlobalConfiguration.Instance,
+            this.Configuration = AssemblyPay.Sdk.Client.Configuration.MergeConfigurations(
+                AssemblyPay.Sdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
+            this.Client = new AssemblyPay.Sdk.Client.ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new AssemblyPay.Sdk.Client.ApiClient(this.Configuration.BasePath);
+            ExceptionFactory = AssemblyPay.Sdk.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -327,7 +322,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public CardAccountsApi(Org.OpenAPITools.Client.ISynchronousClient client, Org.OpenAPITools.Client.IAsynchronousClient asyncClient, Org.OpenAPITools.Client.IReadableConfiguration configuration)
+        public CardAccountsApi(AssemblyPay.Sdk.Client.ISynchronousClient client, AssemblyPay.Sdk.Client.IAsynchronousClient asyncClient, AssemblyPay.Sdk.Client.IReadableConfiguration configuration)
         {
             if (client == null) throw new ArgumentNullException("client");
             if (asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -336,18 +331,18 @@ namespace Org.OpenAPITools.Api
             this.Client = client;
             this.AsynchronousClient = asyncClient;
             this.Configuration = configuration;
-            this.ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
+            this.ExceptionFactory = AssemblyPay.Sdk.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Org.OpenAPITools.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public AssemblyPay.Sdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Org.OpenAPITools.Client.ISynchronousClient Client { get; set; }
+        public AssemblyPay.Sdk.Client.ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
@@ -362,12 +357,12 @@ namespace Org.OpenAPITools.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Org.OpenAPITools.Client.IReadableConfiguration Configuration { get; set; }
+        public AssemblyPay.Sdk.Client.IReadableConfiguration Configuration { get; set; }
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Org.OpenAPITools.Client.ExceptionFactory ExceptionFactory
+        public AssemblyPay.Sdk.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -383,30 +378,30 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Create Card Account Create a Credit **Card Account** to be used as a funding source. Store the returned &#x60;:id&#x60; and use it for a &#x60;make_payment&#x60; **Item Action** call. The &#x60;:id&#x60; is also referred to as a **token** when involving Credit Cards. 
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cardAccountRequestBody"></param>
         /// <returns>CardAccount</returns>
         public CardAccount CreateCardAccount(CardAccountRequestBody cardAccountRequestBody)
         {
-            Org.OpenAPITools.Client.ApiResponse<CardAccount> localVarResponse = CreateCardAccountWithHttpInfo(cardAccountRequestBody);
+            AssemblyPay.Sdk.Client.ApiResponse<CardAccount> localVarResponse = CreateCardAccountWithHttpInfo(cardAccountRequestBody);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Create Card Account Create a Credit **Card Account** to be used as a funding source. Store the returned &#x60;:id&#x60; and use it for a &#x60;make_payment&#x60; **Item Action** call. The &#x60;:id&#x60; is also referred to as a **token** when involving Credit Cards. 
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cardAccountRequestBody"></param>
         /// <returns>ApiResponse of CardAccount</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CardAccount> CreateCardAccountWithHttpInfo(CardAccountRequestBody cardAccountRequestBody)
+        public AssemblyPay.Sdk.Client.ApiResponse<CardAccount> CreateCardAccountWithHttpInfo(CardAccountRequestBody cardAccountRequestBody)
         {
             // verify the required parameter 'cardAccountRequestBody' is set
             if (cardAccountRequestBody == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'cardAccountRequestBody' when calling CardAccountsApi->CreateCardAccount");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'cardAccountRequestBody' when calling CardAccountsApi->CreateCardAccount");
             }
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -417,13 +412,13 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
@@ -435,7 +430,7 @@ namespace Org.OpenAPITools.Api
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -461,33 +456,33 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Create Card Account Create a Credit **Card Account** to be used as a funding source. Store the returned &#x60;:id&#x60; and use it for a &#x60;make_payment&#x60; **Item Action** call. The &#x60;:id&#x60; is also referred to as a **token** when involving Credit Cards. 
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cardAccountRequestBody"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CardAccount</returns>
         public async System.Threading.Tasks.Task<CardAccount> CreateCardAccountAsync(CardAccountRequestBody cardAccountRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CardAccount> localVarResponse = await CreateCardAccountWithHttpInfoAsync(cardAccountRequestBody, cancellationToken).ConfigureAwait(false);
+            AssemblyPay.Sdk.Client.ApiResponse<CardAccount> localVarResponse = await CreateCardAccountWithHttpInfoAsync(cardAccountRequestBody, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Create Card Account Create a Credit **Card Account** to be used as a funding source. Store the returned &#x60;:id&#x60; and use it for a &#x60;make_payment&#x60; **Item Action** call. The &#x60;:id&#x60; is also referred to as a **token** when involving Credit Cards. 
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cardAccountRequestBody"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CardAccount)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CardAccount>> CreateCardAccountWithHttpInfoAsync(CardAccountRequestBody cardAccountRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AssemblyPay.Sdk.Client.ApiResponse<CardAccount>> CreateCardAccountWithHttpInfoAsync(CardAccountRequestBody cardAccountRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'cardAccountRequestBody' is set
             if (cardAccountRequestBody == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'cardAccountRequestBody' when calling CardAccountsApi->CreateCardAccount");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'cardAccountRequestBody' when calling CardAccountsApi->CreateCardAccount");
             }
 
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -498,13 +493,13 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
@@ -516,7 +511,7 @@ namespace Org.OpenAPITools.Api
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -543,30 +538,30 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Redact Card Account Redact a Credit **Card Account** using a given &#x60;:id&#x60;. Redacted Credit **Card Accounts** can no longer be used as a funding source. 
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the card account to be deleted</param>
         /// <returns>CardAccountDeletion</returns>
         public CardAccountDeletion RedactCardAccount(string id)
         {
-            Org.OpenAPITools.Client.ApiResponse<CardAccountDeletion> localVarResponse = RedactCardAccountWithHttpInfo(id);
+            AssemblyPay.Sdk.Client.ApiResponse<CardAccountDeletion> localVarResponse = RedactCardAccountWithHttpInfo(id);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Redact Card Account Redact a Credit **Card Account** using a given &#x60;:id&#x60;. Redacted Credit **Card Accounts** can no longer be used as a funding source. 
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the card account to be deleted</param>
         /// <returns>ApiResponse of CardAccountDeletion</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CardAccountDeletion> RedactCardAccountWithHttpInfo(string id)
+        public AssemblyPay.Sdk.Client.ApiResponse<CardAccountDeletion> RedactCardAccountWithHttpInfo(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling CardAccountsApi->RedactCardAccount");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'id' when calling CardAccountsApi->RedactCardAccount");
             }
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -576,25 +571,25 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", AssemblyPay.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -620,33 +615,33 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Redact Card Account Redact a Credit **Card Account** using a given &#x60;:id&#x60;. Redacted Credit **Card Accounts** can no longer be used as a funding source. 
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the card account to be deleted</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CardAccountDeletion</returns>
         public async System.Threading.Tasks.Task<CardAccountDeletion> RedactCardAccountAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CardAccountDeletion> localVarResponse = await RedactCardAccountWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
+            AssemblyPay.Sdk.Client.ApiResponse<CardAccountDeletion> localVarResponse = await RedactCardAccountWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Redact Card Account Redact a Credit **Card Account** using a given &#x60;:id&#x60;. Redacted Credit **Card Accounts** can no longer be used as a funding source. 
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID of the card account to be deleted</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CardAccountDeletion)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CardAccountDeletion>> RedactCardAccountWithHttpInfoAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AssemblyPay.Sdk.Client.ApiResponse<CardAccountDeletion>> RedactCardAccountWithHttpInfoAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling CardAccountsApi->RedactCardAccount");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'id' when calling CardAccountsApi->RedactCardAccount");
             }
 
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -656,25 +651,25 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", AssemblyPay.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -701,30 +696,30 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Show Card Account Show details of a specific Credit **Card Account** using a given &#x60;:id&#x60;. You can toggle the card account number display to show the first 6 digits in addition to the last 4 digits. Contact Assembly if you want to toggle the card account display. 
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <returns>CardAccount</returns>
         public CardAccount ShowCardAccount(string id)
         {
-            Org.OpenAPITools.Client.ApiResponse<CardAccount> localVarResponse = ShowCardAccountWithHttpInfo(id);
+            AssemblyPay.Sdk.Client.ApiResponse<CardAccount> localVarResponse = ShowCardAccountWithHttpInfo(id);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Show Card Account Show details of a specific Credit **Card Account** using a given &#x60;:id&#x60;. You can toggle the card account number display to show the first 6 digits in addition to the last 4 digits. Contact Assembly if you want to toggle the card account display. 
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <returns>ApiResponse of CardAccount</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CardAccount> ShowCardAccountWithHttpInfo(string id)
+        public AssemblyPay.Sdk.Client.ApiResponse<CardAccount> ShowCardAccountWithHttpInfo(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling CardAccountsApi->ShowCardAccount");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'id' when calling CardAccountsApi->ShowCardAccount");
             }
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -734,25 +729,25 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", AssemblyPay.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -778,33 +773,33 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Show Card Account Show details of a specific Credit **Card Account** using a given &#x60;:id&#x60;. You can toggle the card account number display to show the first 6 digits in addition to the last 4 digits. Contact Assembly if you want to toggle the card account display. 
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CardAccount</returns>
         public async System.Threading.Tasks.Task<CardAccount> ShowCardAccountAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CardAccount> localVarResponse = await ShowCardAccountWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
+            AssemblyPay.Sdk.Client.ApiResponse<CardAccount> localVarResponse = await ShowCardAccountWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Show Card Account Show details of a specific Credit **Card Account** using a given &#x60;:id&#x60;. You can toggle the card account number display to show the first 6 digits in addition to the last 4 digits. Contact Assembly if you want to toggle the card account display. 
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CardAccount)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CardAccount>> ShowCardAccountWithHttpInfoAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AssemblyPay.Sdk.Client.ApiResponse<CardAccount>> ShowCardAccountWithHttpInfoAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling CardAccountsApi->ShowCardAccount");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'id' when calling CardAccountsApi->ShowCardAccount");
             }
 
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -814,25 +809,25 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", AssemblyPay.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -859,30 +854,30 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Show Card Account User Show the **User** the Credit **Card Account** is associated with using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <returns>SingleUser</returns>
         public SingleUser ShowCardAccountUser(string id)
         {
-            Org.OpenAPITools.Client.ApiResponse<SingleUser> localVarResponse = ShowCardAccountUserWithHttpInfo(id);
+            AssemblyPay.Sdk.Client.ApiResponse<SingleUser> localVarResponse = ShowCardAccountUserWithHttpInfo(id);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Show Card Account User Show the **User** the Credit **Card Account** is associated with using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <returns>ApiResponse of SingleUser</returns>
-        public Org.OpenAPITools.Client.ApiResponse<SingleUser> ShowCardAccountUserWithHttpInfo(string id)
+        public AssemblyPay.Sdk.Client.ApiResponse<SingleUser> ShowCardAccountUserWithHttpInfo(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling CardAccountsApi->ShowCardAccountUser");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'id' when calling CardAccountsApi->ShowCardAccountUser");
             }
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -892,25 +887,25 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", AssemblyPay.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -936,33 +931,33 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Show Card Account User Show the **User** the Credit **Card Account** is associated with using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SingleUser</returns>
         public async System.Threading.Tasks.Task<SingleUser> ShowCardAccountUserAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<SingleUser> localVarResponse = await ShowCardAccountUserWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
+            AssemblyPay.Sdk.Client.ApiResponse<SingleUser> localVarResponse = await ShowCardAccountUserWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Show Card Account User Show the **User** the Credit **Card Account** is associated with using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SingleUser)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<SingleUser>> ShowCardAccountUserWithHttpInfoAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AssemblyPay.Sdk.Client.ApiResponse<SingleUser>> ShowCardAccountUserWithHttpInfoAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling CardAccountsApi->ShowCardAccountUser");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'id' when calling CardAccountsApi->ShowCardAccountUser");
             }
 
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -972,25 +967,25 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", AssemblyPay.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -1017,32 +1012,32 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Verify Card Where pre-authorization is enabled on a platform, verifies a **Card Account** when a **Card Account** is successfully verified, its verification status is &#x60;verified&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <param name="cardAccountVerifyRequestBody"> (optional)</param>
         /// <returns>CardAccount</returns>
         public CardAccount VerifyCard(string id, CardAccountVerifyRequestBody cardAccountVerifyRequestBody = default(CardAccountVerifyRequestBody))
         {
-            Org.OpenAPITools.Client.ApiResponse<CardAccount> localVarResponse = VerifyCardWithHttpInfo(id, cardAccountVerifyRequestBody);
+            AssemblyPay.Sdk.Client.ApiResponse<CardAccount> localVarResponse = VerifyCardWithHttpInfo(id, cardAccountVerifyRequestBody);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Verify Card Where pre-authorization is enabled on a platform, verifies a **Card Account** when a **Card Account** is successfully verified, its verification status is &#x60;verified&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <param name="cardAccountVerifyRequestBody"> (optional)</param>
         /// <returns>ApiResponse of CardAccount</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CardAccount> VerifyCardWithHttpInfo(string id, CardAccountVerifyRequestBody cardAccountVerifyRequestBody = default(CardAccountVerifyRequestBody))
+        public AssemblyPay.Sdk.Client.ApiResponse<CardAccount> VerifyCardWithHttpInfo(string id, CardAccountVerifyRequestBody cardAccountVerifyRequestBody = default(CardAccountVerifyRequestBody))
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling CardAccountsApi->VerifyCard");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'id' when calling CardAccountsApi->VerifyCard");
             }
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -1053,26 +1048,26 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", AssemblyPay.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = cardAccountVerifyRequestBody;
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -1098,35 +1093,35 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Verify Card Where pre-authorization is enabled on a platform, verifies a **Card Account** when a **Card Account** is successfully verified, its verification status is &#x60;verified&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <param name="cardAccountVerifyRequestBody"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CardAccount</returns>
         public async System.Threading.Tasks.Task<CardAccount> VerifyCardAsync(string id, CardAccountVerifyRequestBody cardAccountVerifyRequestBody = default(CardAccountVerifyRequestBody), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CardAccount> localVarResponse = await VerifyCardWithHttpInfoAsync(id, cardAccountVerifyRequestBody, cancellationToken).ConfigureAwait(false);
+            AssemblyPay.Sdk.Client.ApiResponse<CardAccount> localVarResponse = await VerifyCardWithHttpInfoAsync(id, cardAccountVerifyRequestBody, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Verify Card Where pre-authorization is enabled on a platform, verifies a **Card Account** when a **Card Account** is successfully verified, its verification status is &#x60;verified&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Card account ID</param>
         /// <param name="cardAccountVerifyRequestBody"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CardAccount)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CardAccount>> VerifyCardWithHttpInfoAsync(string id, CardAccountVerifyRequestBody cardAccountVerifyRequestBody = default(CardAccountVerifyRequestBody), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AssemblyPay.Sdk.Client.ApiResponse<CardAccount>> VerifyCardWithHttpInfoAsync(string id, CardAccountVerifyRequestBody cardAccountVerifyRequestBody = default(CardAccountVerifyRequestBody), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling CardAccountsApi->VerifyCard");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'id' when calling CardAccountsApi->VerifyCard");
             }
 
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
                 "application/json"
@@ -1137,26 +1132,26 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", AssemblyPay.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = cardAccountVerifyRequestBody;
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required

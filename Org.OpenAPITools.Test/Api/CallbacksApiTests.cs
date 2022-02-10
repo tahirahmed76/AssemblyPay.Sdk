@@ -9,20 +9,12 @@
  */
 
 using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Reflection;
-using RestSharp;
 using Xunit;
-
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Api;
+using AssemblyPay.Sdk.Api;
 // uncomment below to import models
-//using Org.OpenAPITools.Model;
+//using AssemblyPay.Sdk.Model;
 
-namespace Org.OpenAPITools.Test.Api
+namespace AssemblyPay.Sdk.Test.Api
 {
     /// <summary>
     ///  Class for testing CallbacksApi

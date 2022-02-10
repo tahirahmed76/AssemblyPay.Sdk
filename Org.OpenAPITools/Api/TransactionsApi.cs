@@ -10,15 +10,10 @@
 
 
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Net;
-using System.Net.Mime;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using AssemblyPay.Sdk.Client;
+using AssemblyPay.Sdk.Model;
 
-namespace Org.OpenAPITools.Api
+namespace AssemblyPay.Sdk.Api
 {
 
     /// <summary>
@@ -33,7 +28,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Retrieve an ordered and paginated list of **Transactions**. Note: &#x60;created_before&#x60; and &#x60;created_after&#x60; range can not be greater than 31 days
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Number of records to retrieve. Up to 200. (optional, default to 10)</param>
         /// <param name="offset">Number of records to offset. Required for pagination. (optional, default to 0)</param>
         /// <param name="accountId">Bank, Card or Wallet Account ID. (optional)</param>
@@ -53,7 +48,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Retrieve an ordered and paginated list of **Transactions**. Note: &#x60;created_before&#x60; and &#x60;created_after&#x60; range can not be greater than 31 days
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Number of records to retrieve. Up to 200. (optional, default to 10)</param>
         /// <param name="offset">Number of records to offset. Required for pagination. (optional, default to 0)</param>
         /// <param name="accountId">Bank, Card or Wallet Account ID. (optional)</param>
@@ -72,7 +67,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show details of a specific **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>SingleTransaction</returns>
         SingleTransaction ShowTransaction(string id);
@@ -83,7 +78,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show details of a specific **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>ApiResponse of SingleTransaction</returns>
         ApiResponse<SingleTransaction> ShowTransactionWithHttpInfo(string id);
@@ -93,7 +88,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **Bank Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>BankAccount</returns>
         BankAccount ShowTransactionBankAccount(string id);
@@ -104,7 +99,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **Bank Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>ApiResponse of BankAccount</returns>
         ApiResponse<BankAccount> ShowTransactionBankAccountWithHttpInfo(string id);
@@ -114,7 +109,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **Card Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>CardAccount</returns>
         CardAccount ShowTransactionCardAccount(string id);
@@ -125,7 +120,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **Card Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>ApiResponse of CardAccount</returns>
         ApiResponse<CardAccount> ShowTransactionCardAccountWithHttpInfo(string id);
@@ -135,7 +130,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **Fees** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>Fees</returns>
         Fees ShowTransactionFees(string id);
@@ -146,7 +141,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **Fees** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>ApiResponse of Fees</returns>
         ApiResponse<Fees> ShowTransactionFeesWithHttpInfo(string id);
@@ -156,7 +151,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **User** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>SingleUser</returns>
         SingleUser ShowTransactionUser(string id);
@@ -167,7 +162,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **User** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>ApiResponse of SingleUser</returns>
         ApiResponse<SingleUser> ShowTransactionUserWithHttpInfo(string id);
@@ -177,7 +172,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **Wallet Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>WalletAccount</returns>
         WalletAccount ShowTransactionWalletAccount(string id);
@@ -188,7 +183,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **Wallet Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>ApiResponse of WalletAccount</returns>
         ApiResponse<WalletAccount> ShowTransactionWalletAccountWithHttpInfo(string id);
@@ -207,7 +202,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Retrieve an ordered and paginated list of **Transactions**. Note: &#x60;created_before&#x60; and &#x60;created_after&#x60; range can not be greater than 31 days
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Number of records to retrieve. Up to 200. (optional, default to 10)</param>
         /// <param name="offset">Number of records to offset. Required for pagination. (optional, default to 0)</param>
         /// <param name="accountId">Bank, Card or Wallet Account ID. (optional)</param>
@@ -228,7 +223,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Retrieve an ordered and paginated list of **Transactions**. Note: &#x60;created_before&#x60; and &#x60;created_after&#x60; range can not be greater than 31 days
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Number of records to retrieve. Up to 200. (optional, default to 10)</param>
         /// <param name="offset">Number of records to offset. Required for pagination. (optional, default to 0)</param>
         /// <param name="accountId">Bank, Card or Wallet Account ID. (optional)</param>
@@ -248,7 +243,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show details of a specific **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SingleTransaction</returns>
@@ -260,7 +255,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show details of a specific **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SingleTransaction)</returns>
@@ -271,7 +266,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **Bank Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BankAccount</returns>
@@ -283,7 +278,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **Bank Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BankAccount)</returns>
@@ -294,7 +289,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **Card Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CardAccount</returns>
@@ -306,7 +301,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **Card Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CardAccount)</returns>
@@ -317,7 +312,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **Fees** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Fees</returns>
@@ -329,7 +324,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **Fees** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Fees)</returns>
@@ -340,7 +335,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **User** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SingleUser</returns>
@@ -352,7 +347,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **User** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SingleUser)</returns>
@@ -363,7 +358,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **Wallet Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WalletAccount</returns>
@@ -375,7 +370,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Show the **Wallet Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WalletAccount)</returns>
@@ -396,7 +391,7 @@ namespace Org.OpenAPITools.Api
     /// </summary>
     public partial class TransactionsApi : ITransactionsApi
     {
-        private Org.OpenAPITools.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private AssemblyPay.Sdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TransactionsApi"/> class.
@@ -412,13 +407,13 @@ namespace Org.OpenAPITools.Api
         /// <returns></returns>
         public TransactionsApi(string basePath)
         {
-            this.Configuration = Org.OpenAPITools.Client.Configuration.MergeConfigurations(
-                Org.OpenAPITools.Client.GlobalConfiguration.Instance,
-                new Org.OpenAPITools.Client.Configuration { BasePath = basePath }
+            this.Configuration = AssemblyPay.Sdk.Client.Configuration.MergeConfigurations(
+                AssemblyPay.Sdk.Client.GlobalConfiguration.Instance,
+                new AssemblyPay.Sdk.Client.Configuration { BasePath = basePath }
             );
-            this.Client = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
+            this.Client = new AssemblyPay.Sdk.Client.ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new AssemblyPay.Sdk.Client.ApiClient(this.Configuration.BasePath);
+            this.ExceptionFactory = AssemblyPay.Sdk.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -427,17 +422,17 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public TransactionsApi(Org.OpenAPITools.Client.Configuration configuration)
+        public TransactionsApi(AssemblyPay.Sdk.Client.Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
-            this.Configuration = Org.OpenAPITools.Client.Configuration.MergeConfigurations(
-                Org.OpenAPITools.Client.GlobalConfiguration.Instance,
+            this.Configuration = AssemblyPay.Sdk.Client.Configuration.MergeConfigurations(
+                AssemblyPay.Sdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
+            this.Client = new AssemblyPay.Sdk.Client.ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new AssemblyPay.Sdk.Client.ApiClient(this.Configuration.BasePath);
+            ExceptionFactory = AssemblyPay.Sdk.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -447,7 +442,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public TransactionsApi(Org.OpenAPITools.Client.ISynchronousClient client, Org.OpenAPITools.Client.IAsynchronousClient asyncClient, Org.OpenAPITools.Client.IReadableConfiguration configuration)
+        public TransactionsApi(AssemblyPay.Sdk.Client.ISynchronousClient client, AssemblyPay.Sdk.Client.IAsynchronousClient asyncClient, AssemblyPay.Sdk.Client.IReadableConfiguration configuration)
         {
             if (client == null) throw new ArgumentNullException("client");
             if (asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -456,18 +451,18 @@ namespace Org.OpenAPITools.Api
             this.Client = client;
             this.AsynchronousClient = asyncClient;
             this.Configuration = configuration;
-            this.ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
+            this.ExceptionFactory = AssemblyPay.Sdk.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Org.OpenAPITools.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public AssemblyPay.Sdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Org.OpenAPITools.Client.ISynchronousClient Client { get; set; }
+        public AssemblyPay.Sdk.Client.ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
@@ -482,12 +477,12 @@ namespace Org.OpenAPITools.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Org.OpenAPITools.Client.IReadableConfiguration Configuration { get; set; }
+        public AssemblyPay.Sdk.Client.IReadableConfiguration Configuration { get; set; }
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Org.OpenAPITools.Client.ExceptionFactory ExceptionFactory
+        public AssemblyPay.Sdk.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -503,7 +498,7 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// List Transactions Retrieve an ordered and paginated list of **Transactions**. Note: &#x60;created_before&#x60; and &#x60;created_after&#x60; range can not be greater than 31 days
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Number of records to retrieve. Up to 200. (optional, default to 10)</param>
         /// <param name="offset">Number of records to offset. Required for pagination. (optional, default to 0)</param>
         /// <param name="accountId">Bank, Card or Wallet Account ID. (optional)</param>
@@ -517,14 +512,14 @@ namespace Org.OpenAPITools.Api
         /// <returns>Transactions</returns>
         public Transactions ListTransactions(int? limit = default(int?), int? offset = default(int?), string accountId = default(string), string itemId = default(string), string transactionType = default(string), string transactionTypeMethod = default(string), string direction = default(string), string userId = default(string), string createdBefore = default(string), string createdAfter = default(string))
         {
-            Org.OpenAPITools.Client.ApiResponse<Transactions> localVarResponse = ListTransactionsWithHttpInfo(limit, offset, accountId, itemId, transactionType, transactionTypeMethod, direction, userId, createdBefore, createdAfter);
+            AssemblyPay.Sdk.Client.ApiResponse<Transactions> localVarResponse = ListTransactionsWithHttpInfo(limit, offset, accountId, itemId, transactionType, transactionTypeMethod, direction, userId, createdBefore, createdAfter);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// List Transactions Retrieve an ordered and paginated list of **Transactions**. Note: &#x60;created_before&#x60; and &#x60;created_after&#x60; range can not be greater than 31 days
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Number of records to retrieve. Up to 200. (optional, default to 10)</param>
         /// <param name="offset">Number of records to offset. Required for pagination. (optional, default to 0)</param>
         /// <param name="accountId">Bank, Card or Wallet Account ID. (optional)</param>
@@ -536,9 +531,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdBefore">Date and time in ISO 8601 format the item(s) were created before (e.g. 2020-02-27T23:54:59Z) (optional)</param>
         /// <param name="createdAfter">Date and time in ISO 8601 format the item(s) were created after (e.g. 2020-02-27T23:54:59Z) (optional)</param>
         /// <returns>ApiResponse of Transactions</returns>
-        public Org.OpenAPITools.Client.ApiResponse<Transactions> ListTransactionsWithHttpInfo(int? limit = default(int?), int? offset = default(int?), string accountId = default(string), string itemId = default(string), string transactionType = default(string), string transactionTypeMethod = default(string), string direction = default(string), string userId = default(string), string createdBefore = default(string), string createdAfter = default(string))
+        public AssemblyPay.Sdk.Client.ApiResponse<Transactions> ListTransactionsWithHttpInfo(int? limit = default(int?), int? offset = default(int?), string accountId = default(string), string itemId = default(string), string transactionType = default(string), string transactionTypeMethod = default(string), string direction = default(string), string userId = default(string), string createdBefore = default(string), string createdAfter = default(string))
         {
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -548,13 +543,13 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
@@ -562,50 +557,50 @@ namespace Org.OpenAPITools.Api
 
             if (limit != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
             }
             if (offset != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
             if (accountId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "account_id", accountId));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "account_id", accountId));
             }
             if (itemId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "item_id", itemId));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "item_id", itemId));
             }
             if (transactionType != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "transaction_type", transactionType));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "transaction_type", transactionType));
             }
             if (transactionTypeMethod != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "transaction_type_method", transactionTypeMethod));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "transaction_type_method", transactionTypeMethod));
             }
             if (direction != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "direction", direction));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "direction", direction));
             }
             if (userId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "user_id", userId));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "user_id", userId));
             }
             if (createdBefore != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_before", createdBefore));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "created_before", createdBefore));
             }
             if (createdAfter != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_after", createdAfter));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "created_after", createdAfter));
             }
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -631,7 +626,7 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// List Transactions Retrieve an ordered and paginated list of **Transactions**. Note: &#x60;created_before&#x60; and &#x60;created_after&#x60; range can not be greater than 31 days
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Number of records to retrieve. Up to 200. (optional, default to 10)</param>
         /// <param name="offset">Number of records to offset. Required for pagination. (optional, default to 0)</param>
         /// <param name="accountId">Bank, Card or Wallet Account ID. (optional)</param>
@@ -646,14 +641,14 @@ namespace Org.OpenAPITools.Api
         /// <returns>Task of Transactions</returns>
         public async System.Threading.Tasks.Task<Transactions> ListTransactionsAsync(int? limit = default(int?), int? offset = default(int?), string accountId = default(string), string itemId = default(string), string transactionType = default(string), string transactionTypeMethod = default(string), string direction = default(string), string userId = default(string), string createdBefore = default(string), string createdAfter = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<Transactions> localVarResponse = await ListTransactionsWithHttpInfoAsync(limit, offset, accountId, itemId, transactionType, transactionTypeMethod, direction, userId, createdBefore, createdAfter, cancellationToken).ConfigureAwait(false);
+            AssemblyPay.Sdk.Client.ApiResponse<Transactions> localVarResponse = await ListTransactionsWithHttpInfoAsync(limit, offset, accountId, itemId, transactionType, transactionTypeMethod, direction, userId, createdBefore, createdAfter, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// List Transactions Retrieve an ordered and paginated list of **Transactions**. Note: &#x60;created_before&#x60; and &#x60;created_after&#x60; range can not be greater than 31 days
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Number of records to retrieve. Up to 200. (optional, default to 10)</param>
         /// <param name="offset">Number of records to offset. Required for pagination. (optional, default to 0)</param>
         /// <param name="accountId">Bank, Card or Wallet Account ID. (optional)</param>
@@ -666,10 +661,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="createdAfter">Date and time in ISO 8601 format the item(s) were created after (e.g. 2020-02-27T23:54:59Z) (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Transactions)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<Transactions>> ListTransactionsWithHttpInfoAsync(int? limit = default(int?), int? offset = default(int?), string accountId = default(string), string itemId = default(string), string transactionType = default(string), string transactionTypeMethod = default(string), string direction = default(string), string userId = default(string), string createdBefore = default(string), string createdAfter = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AssemblyPay.Sdk.Client.ApiResponse<Transactions>> ListTransactionsWithHttpInfoAsync(int? limit = default(int?), int? offset = default(int?), string accountId = default(string), string itemId = default(string), string transactionType = default(string), string transactionTypeMethod = default(string), string direction = default(string), string userId = default(string), string createdBefore = default(string), string createdAfter = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -679,13 +674,13 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
@@ -693,50 +688,50 @@ namespace Org.OpenAPITools.Api
 
             if (limit != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
             }
             if (offset != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
             if (accountId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "account_id", accountId));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "account_id", accountId));
             }
             if (itemId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "item_id", itemId));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "item_id", itemId));
             }
             if (transactionType != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "transaction_type", transactionType));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "transaction_type", transactionType));
             }
             if (transactionTypeMethod != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "transaction_type_method", transactionTypeMethod));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "transaction_type_method", transactionTypeMethod));
             }
             if (direction != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "direction", direction));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "direction", direction));
             }
             if (userId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "user_id", userId));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "user_id", userId));
             }
             if (createdBefore != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_before", createdBefore));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "created_before", createdBefore));
             }
             if (createdAfter != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_after", createdAfter));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "created_after", createdAfter));
             }
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -763,30 +758,30 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Show Transaction Show details of a specific **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>SingleTransaction</returns>
         public SingleTransaction ShowTransaction(string id)
         {
-            Org.OpenAPITools.Client.ApiResponse<SingleTransaction> localVarResponse = ShowTransactionWithHttpInfo(id);
+            AssemblyPay.Sdk.Client.ApiResponse<SingleTransaction> localVarResponse = ShowTransactionWithHttpInfo(id);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Show Transaction Show details of a specific **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>ApiResponse of SingleTransaction</returns>
-        public Org.OpenAPITools.Client.ApiResponse<SingleTransaction> ShowTransactionWithHttpInfo(string id)
+        public AssemblyPay.Sdk.Client.ApiResponse<SingleTransaction> ShowTransactionWithHttpInfo(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransaction");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransaction");
             }
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -796,25 +791,25 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", AssemblyPay.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -840,33 +835,33 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Show Transaction Show details of a specific **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SingleTransaction</returns>
         public async System.Threading.Tasks.Task<SingleTransaction> ShowTransactionAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<SingleTransaction> localVarResponse = await ShowTransactionWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
+            AssemblyPay.Sdk.Client.ApiResponse<SingleTransaction> localVarResponse = await ShowTransactionWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Show Transaction Show details of a specific **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SingleTransaction)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<SingleTransaction>> ShowTransactionWithHttpInfoAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AssemblyPay.Sdk.Client.ApiResponse<SingleTransaction>> ShowTransactionWithHttpInfoAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransaction");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransaction");
             }
 
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -876,25 +871,25 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", AssemblyPay.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -921,30 +916,30 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Show Transaction Bank Account Show the **Bank Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>BankAccount</returns>
         public BankAccount ShowTransactionBankAccount(string id)
         {
-            Org.OpenAPITools.Client.ApiResponse<BankAccount> localVarResponse = ShowTransactionBankAccountWithHttpInfo(id);
+            AssemblyPay.Sdk.Client.ApiResponse<BankAccount> localVarResponse = ShowTransactionBankAccountWithHttpInfo(id);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Show Transaction Bank Account Show the **Bank Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>ApiResponse of BankAccount</returns>
-        public Org.OpenAPITools.Client.ApiResponse<BankAccount> ShowTransactionBankAccountWithHttpInfo(string id)
+        public AssemblyPay.Sdk.Client.ApiResponse<BankAccount> ShowTransactionBankAccountWithHttpInfo(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransactionBankAccount");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransactionBankAccount");
             }
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -954,25 +949,25 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", AssemblyPay.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -998,33 +993,33 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Show Transaction Bank Account Show the **Bank Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BankAccount</returns>
         public async System.Threading.Tasks.Task<BankAccount> ShowTransactionBankAccountAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<BankAccount> localVarResponse = await ShowTransactionBankAccountWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
+            AssemblyPay.Sdk.Client.ApiResponse<BankAccount> localVarResponse = await ShowTransactionBankAccountWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Show Transaction Bank Account Show the **Bank Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BankAccount)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<BankAccount>> ShowTransactionBankAccountWithHttpInfoAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AssemblyPay.Sdk.Client.ApiResponse<BankAccount>> ShowTransactionBankAccountWithHttpInfoAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransactionBankAccount");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransactionBankAccount");
             }
 
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -1034,25 +1029,25 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", AssemblyPay.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -1079,30 +1074,30 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Show Transaction Card Account Show the **Card Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>CardAccount</returns>
         public CardAccount ShowTransactionCardAccount(string id)
         {
-            Org.OpenAPITools.Client.ApiResponse<CardAccount> localVarResponse = ShowTransactionCardAccountWithHttpInfo(id);
+            AssemblyPay.Sdk.Client.ApiResponse<CardAccount> localVarResponse = ShowTransactionCardAccountWithHttpInfo(id);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Show Transaction Card Account Show the **Card Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>ApiResponse of CardAccount</returns>
-        public Org.OpenAPITools.Client.ApiResponse<CardAccount> ShowTransactionCardAccountWithHttpInfo(string id)
+        public AssemblyPay.Sdk.Client.ApiResponse<CardAccount> ShowTransactionCardAccountWithHttpInfo(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransactionCardAccount");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransactionCardAccount");
             }
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -1112,25 +1107,25 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", AssemblyPay.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -1156,33 +1151,33 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Show Transaction Card Account Show the **Card Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CardAccount</returns>
         public async System.Threading.Tasks.Task<CardAccount> ShowTransactionCardAccountAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<CardAccount> localVarResponse = await ShowTransactionCardAccountWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
+            AssemblyPay.Sdk.Client.ApiResponse<CardAccount> localVarResponse = await ShowTransactionCardAccountWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Show Transaction Card Account Show the **Card Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CardAccount)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<CardAccount>> ShowTransactionCardAccountWithHttpInfoAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AssemblyPay.Sdk.Client.ApiResponse<CardAccount>> ShowTransactionCardAccountWithHttpInfoAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransactionCardAccount");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransactionCardAccount");
             }
 
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -1192,25 +1187,25 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", AssemblyPay.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -1237,30 +1232,30 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Show Transaction Fees Show the **Fees** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>Fees</returns>
         public Fees ShowTransactionFees(string id)
         {
-            Org.OpenAPITools.Client.ApiResponse<Fees> localVarResponse = ShowTransactionFeesWithHttpInfo(id);
+            AssemblyPay.Sdk.Client.ApiResponse<Fees> localVarResponse = ShowTransactionFeesWithHttpInfo(id);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Show Transaction Fees Show the **Fees** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>ApiResponse of Fees</returns>
-        public Org.OpenAPITools.Client.ApiResponse<Fees> ShowTransactionFeesWithHttpInfo(string id)
+        public AssemblyPay.Sdk.Client.ApiResponse<Fees> ShowTransactionFeesWithHttpInfo(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransactionFees");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransactionFees");
             }
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -1270,25 +1265,25 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", AssemblyPay.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -1314,33 +1309,33 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Show Transaction Fees Show the **Fees** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Fees</returns>
         public async System.Threading.Tasks.Task<Fees> ShowTransactionFeesAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<Fees> localVarResponse = await ShowTransactionFeesWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
+            AssemblyPay.Sdk.Client.ApiResponse<Fees> localVarResponse = await ShowTransactionFeesWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Show Transaction Fees Show the **Fees** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Fees)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<Fees>> ShowTransactionFeesWithHttpInfoAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AssemblyPay.Sdk.Client.ApiResponse<Fees>> ShowTransactionFeesWithHttpInfoAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransactionFees");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransactionFees");
             }
 
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -1350,25 +1345,25 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", AssemblyPay.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -1395,30 +1390,30 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Show Transaction User Show the **User** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>SingleUser</returns>
         public SingleUser ShowTransactionUser(string id)
         {
-            Org.OpenAPITools.Client.ApiResponse<SingleUser> localVarResponse = ShowTransactionUserWithHttpInfo(id);
+            AssemblyPay.Sdk.Client.ApiResponse<SingleUser> localVarResponse = ShowTransactionUserWithHttpInfo(id);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Show Transaction User Show the **User** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>ApiResponse of SingleUser</returns>
-        public Org.OpenAPITools.Client.ApiResponse<SingleUser> ShowTransactionUserWithHttpInfo(string id)
+        public AssemblyPay.Sdk.Client.ApiResponse<SingleUser> ShowTransactionUserWithHttpInfo(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransactionUser");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransactionUser");
             }
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -1428,25 +1423,25 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", AssemblyPay.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -1472,33 +1467,33 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Show Transaction User Show the **User** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SingleUser</returns>
         public async System.Threading.Tasks.Task<SingleUser> ShowTransactionUserAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<SingleUser> localVarResponse = await ShowTransactionUserWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
+            AssemblyPay.Sdk.Client.ApiResponse<SingleUser> localVarResponse = await ShowTransactionUserWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Show Transaction User Show the **User** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SingleUser)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<SingleUser>> ShowTransactionUserWithHttpInfoAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AssemblyPay.Sdk.Client.ApiResponse<SingleUser>> ShowTransactionUserWithHttpInfoAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransactionUser");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransactionUser");
             }
 
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -1508,25 +1503,25 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", AssemblyPay.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -1553,30 +1548,30 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Show Transaction Wallet Account Show the **Wallet Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>WalletAccount</returns>
         public WalletAccount ShowTransactionWalletAccount(string id)
         {
-            Org.OpenAPITools.Client.ApiResponse<WalletAccount> localVarResponse = ShowTransactionWalletAccountWithHttpInfo(id);
+            AssemblyPay.Sdk.Client.ApiResponse<WalletAccount> localVarResponse = ShowTransactionWalletAccountWithHttpInfo(id);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Show Transaction Wallet Account Show the **Wallet Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>ApiResponse of WalletAccount</returns>
-        public Org.OpenAPITools.Client.ApiResponse<WalletAccount> ShowTransactionWalletAccountWithHttpInfo(string id)
+        public AssemblyPay.Sdk.Client.ApiResponse<WalletAccount> ShowTransactionWalletAccountWithHttpInfo(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransactionWalletAccount");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransactionWalletAccount");
             }
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -1586,25 +1581,25 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", AssemblyPay.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -1630,33 +1625,33 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Show Transaction Wallet Account Show the **Wallet Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WalletAccount</returns>
         public async System.Threading.Tasks.Task<WalletAccount> ShowTransactionWalletAccountAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<WalletAccount> localVarResponse = await ShowTransactionWalletAccountWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
+            AssemblyPay.Sdk.Client.ApiResponse<WalletAccount> localVarResponse = await ShowTransactionWalletAccountWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Show Transaction Wallet Account Show the **Wallet Account** associated with the **Transaction** using a given &#x60;:id&#x60;.
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WalletAccount)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<WalletAccount>> ShowTransactionWalletAccountWithHttpInfoAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AssemblyPay.Sdk.Client.ApiResponse<WalletAccount>> ShowTransactionWalletAccountWithHttpInfoAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransactionWalletAccount");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'id' when calling TransactionsApi->ShowTransactionWalletAccount");
             }
 
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -1666,25 +1661,25 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", AssemblyPay.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required

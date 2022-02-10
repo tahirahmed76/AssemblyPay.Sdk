@@ -10,15 +10,10 @@
 
 
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Net;
-using System.Net.Mime;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using AssemblyPay.Sdk.Client;
+using AssemblyPay.Sdk.Model;
 
-namespace Org.OpenAPITools.Api
+namespace AssemblyPay.Sdk.Api
 {
 
     /// <summary>
@@ -33,7 +28,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Retrieve an ordered and paginated list of existing **Batch Transactions**. The list can be filtered by **Account**, **Batch ID**, **Item**, and **Transaction Type**. 
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Number of records to retrieve. Up to 200. (optional, default to 10)</param>
         /// <param name="offset">Number of records to offset. Required for pagination. (optional, default to 0)</param>
         /// <param name="accountId">Bank, Card or Wallet Account ID. (optional)</param>
@@ -55,7 +50,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Retrieve an ordered and paginated list of existing **Batch Transactions**. The list can be filtered by **Account**, **Batch ID**, **Item**, and **Transaction Type**. 
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Number of records to retrieve. Up to 200. (optional, default to 10)</param>
         /// <param name="offset">Number of records to offset. Required for pagination. (optional, default to 0)</param>
         /// <param name="accountId">Bank, Card or Wallet Account ID. (optional)</param>
@@ -76,7 +71,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Get a batch transaction using its ID
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>SingleBatchTransaction</returns>
         SingleBatchTransaction ShowBatchTransaction(string id);
@@ -87,7 +82,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Get a batch transaction using its ID
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>ApiResponse of SingleBatchTransaction</returns>
         ApiResponse<SingleBatchTransaction> ShowBatchTransactionWithHttpInfo(string id);
@@ -106,7 +101,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Retrieve an ordered and paginated list of existing **Batch Transactions**. The list can be filtered by **Account**, **Batch ID**, **Item**, and **Transaction Type**. 
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Number of records to retrieve. Up to 200. (optional, default to 10)</param>
         /// <param name="offset">Number of records to offset. Required for pagination. (optional, default to 0)</param>
         /// <param name="accountId">Bank, Card or Wallet Account ID. (optional)</param>
@@ -129,7 +124,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Retrieve an ordered and paginated list of existing **Batch Transactions**. The list can be filtered by **Account**, **Batch ID**, **Item**, and **Transaction Type**. 
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Number of records to retrieve. Up to 200. (optional, default to 10)</param>
         /// <param name="offset">Number of records to offset. Required for pagination. (optional, default to 0)</param>
         /// <param name="accountId">Bank, Card or Wallet Account ID. (optional)</param>
@@ -151,7 +146,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Get a batch transaction using its ID
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SingleBatchTransaction</returns>
@@ -163,7 +158,7 @@ namespace Org.OpenAPITools.Api
         /// <remarks>
         /// Get a batch transaction using its ID
         /// </remarks>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SingleBatchTransaction)</returns>
@@ -184,7 +179,7 @@ namespace Org.OpenAPITools.Api
     /// </summary>
     public partial class BatchTransactionsApi : IBatchTransactionsApi
     {
-        private Org.OpenAPITools.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private AssemblyPay.Sdk.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BatchTransactionsApi"/> class.
@@ -200,13 +195,13 @@ namespace Org.OpenAPITools.Api
         /// <returns></returns>
         public BatchTransactionsApi(string basePath)
         {
-            this.Configuration = Org.OpenAPITools.Client.Configuration.MergeConfigurations(
-                Org.OpenAPITools.Client.GlobalConfiguration.Instance,
-                new Org.OpenAPITools.Client.Configuration { BasePath = basePath }
+            this.Configuration = AssemblyPay.Sdk.Client.Configuration.MergeConfigurations(
+                AssemblyPay.Sdk.Client.GlobalConfiguration.Instance,
+                new AssemblyPay.Sdk.Client.Configuration { BasePath = basePath }
             );
-            this.Client = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
+            this.Client = new AssemblyPay.Sdk.Client.ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new AssemblyPay.Sdk.Client.ApiClient(this.Configuration.BasePath);
+            this.ExceptionFactory = AssemblyPay.Sdk.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -215,17 +210,17 @@ namespace Org.OpenAPITools.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public BatchTransactionsApi(Org.OpenAPITools.Client.Configuration configuration)
+        public BatchTransactionsApi(AssemblyPay.Sdk.Client.Configuration configuration)
         {
             if (configuration == null) throw new ArgumentNullException("configuration");
 
-            this.Configuration = Org.OpenAPITools.Client.Configuration.MergeConfigurations(
-                Org.OpenAPITools.Client.GlobalConfiguration.Instance,
+            this.Configuration = AssemblyPay.Sdk.Client.Configuration.MergeConfigurations(
+                AssemblyPay.Sdk.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Org.OpenAPITools.Client.ApiClient(this.Configuration.BasePath);
-            ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
+            this.Client = new AssemblyPay.Sdk.Client.ApiClient(this.Configuration.BasePath);
+            this.AsynchronousClient = new AssemblyPay.Sdk.Client.ApiClient(this.Configuration.BasePath);
+            ExceptionFactory = AssemblyPay.Sdk.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -235,7 +230,7 @@ namespace Org.OpenAPITools.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
-        public BatchTransactionsApi(Org.OpenAPITools.Client.ISynchronousClient client, Org.OpenAPITools.Client.IAsynchronousClient asyncClient, Org.OpenAPITools.Client.IReadableConfiguration configuration)
+        public BatchTransactionsApi(AssemblyPay.Sdk.Client.ISynchronousClient client, AssemblyPay.Sdk.Client.IAsynchronousClient asyncClient, AssemblyPay.Sdk.Client.IReadableConfiguration configuration)
         {
             if (client == null) throw new ArgumentNullException("client");
             if (asyncClient == null) throw new ArgumentNullException("asyncClient");
@@ -244,18 +239,18 @@ namespace Org.OpenAPITools.Api
             this.Client = client;
             this.AsynchronousClient = asyncClient;
             this.Configuration = configuration;
-            this.ExceptionFactory = Org.OpenAPITools.Client.Configuration.DefaultExceptionFactory;
+            this.ExceptionFactory = AssemblyPay.Sdk.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
         /// </summary>
-        public Org.OpenAPITools.Client.IAsynchronousClient AsynchronousClient { get; set; }
+        public AssemblyPay.Sdk.Client.IAsynchronousClient AsynchronousClient { get; set; }
 
         /// <summary>
         /// The client for accessing this underlying API synchronously.
         /// </summary>
-        public Org.OpenAPITools.Client.ISynchronousClient Client { get; set; }
+        public AssemblyPay.Sdk.Client.ISynchronousClient Client { get; set; }
 
         /// <summary>
         /// Gets the base path of the API client.
@@ -270,12 +265,12 @@ namespace Org.OpenAPITools.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Org.OpenAPITools.Client.IReadableConfiguration Configuration { get; set; }
+        public AssemblyPay.Sdk.Client.IReadableConfiguration Configuration { get; set; }
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public Org.OpenAPITools.Client.ExceptionFactory ExceptionFactory
+        public AssemblyPay.Sdk.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -291,7 +286,7 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// List Batch Transactions Retrieve an ordered and paginated list of existing **Batch Transactions**. The list can be filtered by **Account**, **Batch ID**, **Item**, and **Transaction Type**. 
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Number of records to retrieve. Up to 200. (optional, default to 10)</param>
         /// <param name="offset">Number of records to offset. Required for pagination. (optional, default to 0)</param>
         /// <param name="accountId">Bank, Card or Wallet Account ID. (optional)</param>
@@ -307,14 +302,14 @@ namespace Org.OpenAPITools.Api
         /// <returns>ListBatchTransactions</returns>
         public ListBatchTransactions ListBatchTransactions(int? limit = default(int?), int? offset = default(int?), string accountId = default(string), string batchId = default(string), string itemId = default(string), string transactionType = default(string), string transactionTypeMethod = default(string), string direction = default(string), string createdBefore = default(string), string createdAfter = default(string), string disbursementBank = default(string), string processingBank = default(string))
         {
-            Org.OpenAPITools.Client.ApiResponse<ListBatchTransactions> localVarResponse = ListBatchTransactionsWithHttpInfo(limit, offset, accountId, batchId, itemId, transactionType, transactionTypeMethod, direction, createdBefore, createdAfter, disbursementBank, processingBank);
+            AssemblyPay.Sdk.Client.ApiResponse<ListBatchTransactions> localVarResponse = ListBatchTransactionsWithHttpInfo(limit, offset, accountId, batchId, itemId, transactionType, transactionTypeMethod, direction, createdBefore, createdAfter, disbursementBank, processingBank);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// List Batch Transactions Retrieve an ordered and paginated list of existing **Batch Transactions**. The list can be filtered by **Account**, **Batch ID**, **Item**, and **Transaction Type**. 
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Number of records to retrieve. Up to 200. (optional, default to 10)</param>
         /// <param name="offset">Number of records to offset. Required for pagination. (optional, default to 0)</param>
         /// <param name="accountId">Bank, Card or Wallet Account ID. (optional)</param>
@@ -328,9 +323,9 @@ namespace Org.OpenAPITools.Api
         /// <param name="disbursementBank">The bank used for disbursing the payment. Please use a default value of &#x60;any&#x60; (optional)</param>
         /// <param name="processingBank">The bank used for processing the payment. Please use a default value of &#x60;any&#x60; (optional)</param>
         /// <returns>ApiResponse of ListBatchTransactions</returns>
-        public Org.OpenAPITools.Client.ApiResponse<ListBatchTransactions> ListBatchTransactionsWithHttpInfo(int? limit = default(int?), int? offset = default(int?), string accountId = default(string), string batchId = default(string), string itemId = default(string), string transactionType = default(string), string transactionTypeMethod = default(string), string direction = default(string), string createdBefore = default(string), string createdAfter = default(string), string disbursementBank = default(string), string processingBank = default(string))
+        public AssemblyPay.Sdk.Client.ApiResponse<ListBatchTransactions> ListBatchTransactionsWithHttpInfo(int? limit = default(int?), int? offset = default(int?), string accountId = default(string), string batchId = default(string), string itemId = default(string), string transactionType = default(string), string transactionTypeMethod = default(string), string direction = default(string), string createdBefore = default(string), string createdAfter = default(string), string disbursementBank = default(string), string processingBank = default(string))
         {
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -340,13 +335,13 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
@@ -354,58 +349,58 @@ namespace Org.OpenAPITools.Api
 
             if (limit != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
             }
             if (offset != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
             if (accountId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "account_id", accountId));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "account_id", accountId));
             }
             if (batchId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "batch_id", batchId));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "batch_id", batchId));
             }
             if (itemId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "item_id", itemId));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "item_id", itemId));
             }
             if (transactionType != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "transaction_type", transactionType));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "transaction_type", transactionType));
             }
             if (transactionTypeMethod != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "transaction_type_method", transactionTypeMethod));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "transaction_type_method", transactionTypeMethod));
             }
             if (direction != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "direction", direction));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "direction", direction));
             }
             if (createdBefore != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_before", createdBefore));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "created_before", createdBefore));
             }
             if (createdAfter != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_after", createdAfter));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "created_after", createdAfter));
             }
             if (disbursementBank != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "disbursement_bank", disbursementBank));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "disbursement_bank", disbursementBank));
             }
             if (processingBank != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "processing_bank", processingBank));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "processing_bank", processingBank));
             }
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -431,7 +426,7 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// List Batch Transactions Retrieve an ordered and paginated list of existing **Batch Transactions**. The list can be filtered by **Account**, **Batch ID**, **Item**, and **Transaction Type**. 
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Number of records to retrieve. Up to 200. (optional, default to 10)</param>
         /// <param name="offset">Number of records to offset. Required for pagination. (optional, default to 0)</param>
         /// <param name="accountId">Bank, Card or Wallet Account ID. (optional)</param>
@@ -448,14 +443,14 @@ namespace Org.OpenAPITools.Api
         /// <returns>Task of ListBatchTransactions</returns>
         public async System.Threading.Tasks.Task<ListBatchTransactions> ListBatchTransactionsAsync(int? limit = default(int?), int? offset = default(int?), string accountId = default(string), string batchId = default(string), string itemId = default(string), string transactionType = default(string), string transactionTypeMethod = default(string), string direction = default(string), string createdBefore = default(string), string createdAfter = default(string), string disbursementBank = default(string), string processingBank = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<ListBatchTransactions> localVarResponse = await ListBatchTransactionsWithHttpInfoAsync(limit, offset, accountId, batchId, itemId, transactionType, transactionTypeMethod, direction, createdBefore, createdAfter, disbursementBank, processingBank, cancellationToken).ConfigureAwait(false);
+            AssemblyPay.Sdk.Client.ApiResponse<ListBatchTransactions> localVarResponse = await ListBatchTransactionsWithHttpInfoAsync(limit, offset, accountId, batchId, itemId, transactionType, transactionTypeMethod, direction, createdBefore, createdAfter, disbursementBank, processingBank, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// List Batch Transactions Retrieve an ordered and paginated list of existing **Batch Transactions**. The list can be filtered by **Account**, **Batch ID**, **Item**, and **Transaction Type**. 
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="limit">Number of records to retrieve. Up to 200. (optional, default to 10)</param>
         /// <param name="offset">Number of records to offset. Required for pagination. (optional, default to 0)</param>
         /// <param name="accountId">Bank, Card or Wallet Account ID. (optional)</param>
@@ -470,10 +465,10 @@ namespace Org.OpenAPITools.Api
         /// <param name="processingBank">The bank used for processing the payment. Please use a default value of &#x60;any&#x60; (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ListBatchTransactions)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<ListBatchTransactions>> ListBatchTransactionsWithHttpInfoAsync(int? limit = default(int?), int? offset = default(int?), string accountId = default(string), string batchId = default(string), string itemId = default(string), string transactionType = default(string), string transactionTypeMethod = default(string), string direction = default(string), string createdBefore = default(string), string createdAfter = default(string), string disbursementBank = default(string), string processingBank = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AssemblyPay.Sdk.Client.ApiResponse<ListBatchTransactions>> ListBatchTransactionsWithHttpInfoAsync(int? limit = default(int?), int? offset = default(int?), string accountId = default(string), string batchId = default(string), string itemId = default(string), string transactionType = default(string), string transactionTypeMethod = default(string), string direction = default(string), string createdBefore = default(string), string createdAfter = default(string), string disbursementBank = default(string), string processingBank = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -483,13 +478,13 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
@@ -497,58 +492,58 @@ namespace Org.OpenAPITools.Api
 
             if (limit != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
             }
             if (offset != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "offset", offset));
             }
             if (accountId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "account_id", accountId));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "account_id", accountId));
             }
             if (batchId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "batch_id", batchId));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "batch_id", batchId));
             }
             if (itemId != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "item_id", itemId));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "item_id", itemId));
             }
             if (transactionType != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "transaction_type", transactionType));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "transaction_type", transactionType));
             }
             if (transactionTypeMethod != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "transaction_type_method", transactionTypeMethod));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "transaction_type_method", transactionTypeMethod));
             }
             if (direction != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "direction", direction));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "direction", direction));
             }
             if (createdBefore != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_before", createdBefore));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "created_before", createdBefore));
             }
             if (createdAfter != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "created_after", createdAfter));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "created_after", createdAfter));
             }
             if (disbursementBank != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "disbursement_bank", disbursementBank));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "disbursement_bank", disbursementBank));
             }
             if (processingBank != null)
             {
-                localVarRequestOptions.QueryParameters.Add(Org.OpenAPITools.Client.ClientUtils.ParameterToMultiMap("", "processing_bank", processingBank));
+                localVarRequestOptions.QueryParameters.Add(AssemblyPay.Sdk.Client.ClientUtils.ParameterToMultiMap("", "processing_bank", processingBank));
             }
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -575,30 +570,30 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Show Batch Transaction Get a batch transaction using its ID
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>SingleBatchTransaction</returns>
         public SingleBatchTransaction ShowBatchTransaction(string id)
         {
-            Org.OpenAPITools.Client.ApiResponse<SingleBatchTransaction> localVarResponse = ShowBatchTransactionWithHttpInfo(id);
+            AssemblyPay.Sdk.Client.ApiResponse<SingleBatchTransaction> localVarResponse = ShowBatchTransactionWithHttpInfo(id);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Show Batch Transaction Get a batch transaction using its ID
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <returns>ApiResponse of SingleBatchTransaction</returns>
-        public Org.OpenAPITools.Client.ApiResponse<SingleBatchTransaction> ShowBatchTransactionWithHttpInfo(string id)
+        public AssemblyPay.Sdk.Client.ApiResponse<SingleBatchTransaction> ShowBatchTransactionWithHttpInfo(string id)
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling BatchTransactionsApi->ShowBatchTransaction");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'id' when calling BatchTransactionsApi->ShowBatchTransaction");
             }
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -608,25 +603,25 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", AssemblyPay.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required
@@ -652,33 +647,33 @@ namespace Org.OpenAPITools.Api
         /// <summary>
         /// Show Batch Transaction Get a batch transaction using its ID
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SingleBatchTransaction</returns>
         public async System.Threading.Tasks.Task<SingleBatchTransaction> ShowBatchTransactionAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Org.OpenAPITools.Client.ApiResponse<SingleBatchTransaction> localVarResponse = await ShowBatchTransactionWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
+            AssemblyPay.Sdk.Client.ApiResponse<SingleBatchTransaction> localVarResponse = await ShowBatchTransactionWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Show Batch Transaction Get a batch transaction using its ID
         /// </summary>
-        /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="AssemblyPay.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Transaction ID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SingleBatchTransaction)</returns>
-        public async System.Threading.Tasks.Task<Org.OpenAPITools.Client.ApiResponse<SingleBatchTransaction>> ShowBatchTransactionWithHttpInfoAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<AssemblyPay.Sdk.Client.ApiResponse<SingleBatchTransaction>> ShowBatchTransactionWithHttpInfoAsync(string id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'id' is set
             if (id == null)
             {
-                throw new Org.OpenAPITools.Client.ApiException(400, "Missing required parameter 'id' when calling BatchTransactionsApi->ShowBatchTransaction");
+                throw new AssemblyPay.Sdk.Client.ApiException(400, "Missing required parameter 'id' when calling BatchTransactionsApi->ShowBatchTransaction");
             }
 
 
-            Org.OpenAPITools.Client.RequestOptions localVarRequestOptions = new Org.OpenAPITools.Client.RequestOptions();
+            AssemblyPay.Sdk.Client.RequestOptions localVarRequestOptions = new AssemblyPay.Sdk.Client.RequestOptions();
 
             string[] _contentTypes = new string[] {
             };
@@ -688,25 +683,25 @@ namespace Org.OpenAPITools.Api
                 "application/json"
             };
 
-            var localVarContentType = Org.OpenAPITools.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            var localVarContentType = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
             if (localVarContentType != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
             }
 
-            var localVarAccept = Org.OpenAPITools.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            var localVarAccept = AssemblyPay.Sdk.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null)
             {
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("id", Org.OpenAPITools.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", AssemblyPay.Sdk.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (basicAuth) required
             // http basic authentication required
             if (!string.IsNullOrEmpty(this.Configuration.Username) || !string.IsNullOrEmpty(this.Configuration.Password) && !localVarRequestOptions.HeaderParameters.ContainsKey("Authorization"))
             {
-                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + Org.OpenAPITools.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
+                localVarRequestOptions.HeaderParameters.Add("Authorization", "Basic " + AssemblyPay.Sdk.Client.ClientUtils.Base64Encode(this.Configuration.Username + ":" + this.Configuration.Password));
             }
             // authentication (oAuth2ClientCredentials) required
             // oauth required

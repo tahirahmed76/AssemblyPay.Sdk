@@ -11,7 +11,7 @@
 
 using System;
 
-namespace Org.OpenAPITools.Client
+namespace AssemblyPay.Sdk.Client
 {
     /// <summary>
     /// A delegate to ExceptionFactory method

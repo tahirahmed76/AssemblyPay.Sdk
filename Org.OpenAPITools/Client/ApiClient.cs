@@ -10,28 +10,20 @@
 
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Reflection;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters;
-using System.Text;
-using System.Threading;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using ErrorEventArgs = Newtonsoft.Json.Serialization.ErrorEventArgs;
 using RestSharp;
 using RestSharp.Deserializers;
 using RestSharpMethod = RestSharp.Method;
 using Polly;
 
-namespace Org.OpenAPITools.Client
+namespace AssemblyPay.Sdk.Client
 {
     /// <summary>
     /// Allows RestSharp to Serialize/Deserialize JSON using our custom logic, but only when ContentType is JSON.
@@ -71,10 +63,10 @@ namespace Org.OpenAPITools.Client
         /// <returns>A JSON string.</returns>
         public string Serialize(object obj)
         {
-            if (obj != null && obj is Org.OpenAPITools.Model.AbstractOpenAPISchema)
+            if (obj != null && obj is AssemblyPay.Sdk.Model.AbstractOpenAPISchema)
             {
                 // the object to be serialized is an oneOf/anyOf schema
-                return ((Org.OpenAPITools.Model.AbstractOpenAPISchema)obj).ToJson();
+                return ((AssemblyPay.Sdk.Model.AbstractOpenAPISchema)obj).ToJson();
             }
             else
             {
@@ -200,7 +192,7 @@ namespace Org.OpenAPITools.Client
         /// </summary>
         public ApiClient()
         {
-            _baseUrl = Org.OpenAPITools.Client.GlobalConfiguration.Instance.BasePath;
+            _baseUrl = AssemblyPay.Sdk.Client.GlobalConfiguration.Instance.BasePath;
         }
 
         /// <summary>
@@ -496,7 +488,7 @@ namespace Org.OpenAPITools.Client
             }
 
             // if the response type is oneOf/anyOf, call FromJSON to deserialize the data
-            if (typeof(Org.OpenAPITools.Model.AbstractOpenAPISchema).IsAssignableFrom(typeof(T)))
+            if (typeof(AssemblyPay.Sdk.Model.AbstractOpenAPISchema).IsAssignableFrom(typeof(T)))
             {
                 try
                 {
@@ -615,7 +607,7 @@ namespace Org.OpenAPITools.Client
             }
 
             // if the response type is oneOf/anyOf, call FromJSON to deserialize the data
-            if (typeof(Org.OpenAPITools.Model.AbstractOpenAPISchema).IsAssignableFrom(typeof(T)))
+            if (typeof(AssemblyPay.Sdk.Model.AbstractOpenAPISchema).IsAssignableFrom(typeof(T)))
             {
                 response.Data = (T) typeof(T).GetMethod("FromJson").Invoke(null, new object[] { response.Content });
             }

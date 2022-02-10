@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>AssemblyPay.Sdk</id>
+    <version>1.0.1</version>
+    <authors>Tahir Ahmed</authors>
+    <readme>readme.md</readme>
+    <description>A library generated from a OpenAPI doc that wraps the AssemblyPay Payment Gateway</description>
+    <releaseNotes>Minor update</releaseNotes>
+    <copyright>No Copyright</copyright>
+    <repository type="git" url="https://github.com/GIT_USER_ID/GIT_REPO_ID.git" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="JsonSubTypes" version="1.8.0" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="13.0.1" exclude="Build,Analyzers" />
+        <dependency id="Polly" version="7.2.2" exclude="Build,Analyzers" />
+        <dependency id="RestSharp" version="106.13.0" exclude="Build,Analyzers" />
+        <dependency id="System.ComponentModel.Annotations" version="5.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\iSplendid\SourceCode\AssemblyPay.Sdk\Org.OpenAPITools\bin\Debug\netstandard2.0\AssemblyPay.Sdk.dll" target="lib\netstandard2.0\AssemblyPay.Sdk.dll" />
+    <file src="D:\iSplendid\SourceCode\AssemblyPay.Sdk\Org.OpenAPITools\bin\Debug\netstandard2.0\Org.OpenAPITools.xml" target="lib\netstandard2.0\Org.OpenAPITools.xml" />
+    <file src="D:\iSplendid\SourceCode\AssemblyPay.Sdk\readme.md" target="\readme.md" />
+  </files>
+</package>

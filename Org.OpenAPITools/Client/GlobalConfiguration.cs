@@ -11,7 +11,7 @@
 
 using System.Collections.Generic;
 
-namespace Org.OpenAPITools.Client
+namespace AssemblyPay.Sdk.Client
 {
     /// <summary>
     /// <see cref="GlobalConfiguration"/> provides a compile-time extension point for globally configuring

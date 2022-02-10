@@ -9,7 +9,7 @@
  */
 
 
-namespace Org.OpenAPITools.Client
+namespace AssemblyPay.Sdk.Client
 {
     /// <summary>
     /// Http methods supported by swagger

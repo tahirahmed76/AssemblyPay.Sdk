@@ -15,11 +15,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
-using System.Text;
 
-namespace Org.OpenAPITools.Client
+namespace AssemblyPay.Sdk.Client
 {
     /// <summary>
     /// Represents a set of configuration settings
@@ -467,7 +465,7 @@ namespace Org.OpenAPITools.Client
         /// </summary>
         public static string ToDebugReport()
         {
-            string report = "C# SDK (Org.OpenAPITools) Debug Report:\n";
+            string report = "C# SDK (AssemblyPay.Sdk) Debug Report:\n";
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: 2.0\n";

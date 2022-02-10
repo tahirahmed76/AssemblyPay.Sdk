@@ -9,10 +9,9 @@
  */
 
 
-using System;
 using System.Threading.Tasks;
 
-namespace Org.OpenAPITools.Client
+namespace AssemblyPay.Sdk.Client
 {
     /// <summary>
     /// Contract for Asynchronous RESTful API interactions.

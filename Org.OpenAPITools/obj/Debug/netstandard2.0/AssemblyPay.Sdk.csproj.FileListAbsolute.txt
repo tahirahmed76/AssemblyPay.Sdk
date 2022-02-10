@@ -1,0 +1,9 @@
+D:\iSplendid\SourceCode\AssemblyPay.Sdk\Org.OpenAPITools\bin\Debug\netstandard2.0\Org.OpenAPITools.xml
+D:\iSplendid\SourceCode\AssemblyPay.Sdk\Org.OpenAPITools\bin\Debug\netstandard2.0\AssemblyPay.Sdk.deps.json
+D:\iSplendid\SourceCode\AssemblyPay.Sdk\Org.OpenAPITools\bin\Debug\netstandard2.0\AssemblyPay.Sdk.dll
+D:\iSplendid\SourceCode\AssemblyPay.Sdk\Org.OpenAPITools\bin\Debug\netstandard2.0\AssemblyPay.Sdk.pdb
+D:\iSplendid\SourceCode\AssemblyPay.Sdk\Org.OpenAPITools\obj\Debug\netstandard2.0\AssemblyPay.Sdk.csproj.AssemblyReference.cache
+D:\iSplendid\SourceCode\AssemblyPay.Sdk\Org.OpenAPITools\obj\Debug\netstandard2.0\AssemblyPay.Sdk.GeneratedMSBuildEditorConfig.editorconfig
+D:\iSplendid\SourceCode\AssemblyPay.Sdk\Org.OpenAPITools\obj\Debug\netstandard2.0\AssemblyPay.Sdk.csproj.CoreCompileInputs.cache
+D:\iSplendid\SourceCode\AssemblyPay.Sdk\Org.OpenAPITools\obj\Debug\netstandard2.0\AssemblyPay.Sdk.dll
+D:\iSplendid\SourceCode\AssemblyPay.Sdk\Org.OpenAPITools\obj\Debug\netstandard2.0\AssemblyPay.Sdk.pdb

@@ -13,7 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 
-namespace Org.OpenAPITools.Client
+namespace AssemblyPay.Sdk.Client
 {
     /// <summary>
     /// Provides a non-generic contract for the ApiResponse wrapper.

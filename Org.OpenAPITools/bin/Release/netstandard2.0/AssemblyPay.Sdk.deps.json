@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "Org.OpenAPITools/1.0.0": {
+      "AssemblyPay.Sdk/1.0.2": {
         "dependencies": {
           "JsonSubTypes": "1.8.0",
           "NETStandard.Library": "2.0.3",
@@ -17,7 +17,7 @@
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "runtime": {
-          "Org.OpenAPITools.dll": {}
+          "AssemblyPay.Sdk.dll": {}
         }
       },
       "JsonSubTypes/1.8.0": {
@@ -72,7 +72,7 @@
     }
   },
   "libraries": {
-    "Org.OpenAPITools/1.0.0": {
+    "AssemblyPay.Sdk/1.0.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
