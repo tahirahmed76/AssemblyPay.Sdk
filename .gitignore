@@ -1,0 +1,8 @@
+*.suo
+*.user
+_ReSharper.*
+Org.OpenAPITools\bin
+Org.OpenAPITools\obj
+Org.OpenAPITools.Test\bin
+Org.OpenAPITools.Test\obj
+packages
